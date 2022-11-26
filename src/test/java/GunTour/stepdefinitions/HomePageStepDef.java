@@ -89,7 +89,6 @@ public class HomePageStepDef {
 
     @When("user choose one product to book")
     public void userChooseOneProductToBook() {
-        wait(5000);
         homePageUser.clickButtonBookNowProduct();
     }
 
@@ -101,14 +100,16 @@ public class HomePageStepDef {
 
     @And("user choose a second product")
     public void userChooseASecondProduct() {
-        wait(5000);
+        wait(1000);
         homePageUser.clickButtonBookNowProduct2();
+        wait(1000);
     }
 
     @When("user choose a third product")
     public void userChooseAThirdProduct() {
-        wait(5000);
+        wait(1000);
         homePageUser.clickButtonBookNowProduct3();
+        wait(1000);
     }
 
     @When("user click on product picture")
@@ -134,8 +135,8 @@ public class HomePageStepDef {
 
     @Then("should pop up successfully book a product")
     public void shouldPopUpSuccessfullyBookAProduct() {
-        String expectedText ="Added to Booking Now";
-        Assert.assertEquals("Added to Booking Now", expectedText);
+        String expectedText ="1";
+        Assert.assertEquals("1", expectedText);
     }
 
     @When("user anonym click second product Book Now button")
@@ -156,6 +157,7 @@ public class HomePageStepDef {
     @Then("Product added to booking now with message {string}")
     public void productAddedToBookingNow(String message) {
         Assert.assertEquals(message,homePageUser.getSuccessAddProduct());
+        wait(500);
     }
 
     @When("I click on avatar menu")

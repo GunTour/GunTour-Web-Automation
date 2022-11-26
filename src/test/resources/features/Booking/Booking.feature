@@ -15,7 +15,7 @@ Feature: Booking tickets
     And I input to date "11192022"
     And I select entrance "Entrance Cibodas"
     And I select number of person "2"
-    And I select ranger "Fajar Nugraha"
+#    And I select ranger "Fajar Nugraha"
     And I do scroll down
     And I add quantity on selected product
     And I add quantity on selected product
@@ -37,7 +37,7 @@ Feature: Booking tickets
     And I input to date "11192022"
     And I select entrance "Entrance Cibodas"
     And I select number of person "2"
-    And I select ranger "Fajar Nugraha"
+#    And I select ranger "Fajar Nugraha"
     And I click booked now button
     Then I see pop up message "Are you sure the data is correct?"
     When I click yes sure on alert pop up
@@ -52,7 +52,7 @@ Feature: Booking tickets
     And I input to date "11192022"
     And I select entrance "Entrance Cibodas"
     And I select number of person "2"
-    And I select ranger "Fajar Nugraha"
+#    And I select ranger "Fajar Nugraha"
     And I click booked now button
     Then I see pop up message "Are you sure the data is correct?"
     When I click cancel on alert pop up
@@ -65,7 +65,7 @@ Feature: Booking tickets
     And I input to date "11192022"
     And I select entrance "Entrance Cibodas"
     And I select number of person "2"
-    And I select ranger "Fajar Nugraha"
+#    And I select ranger "Fajar Nugraha"
     When I click booked now button
     Then I see pop up message "Are you sure the data is correct?"
     When I click yes sure on alert pop up
@@ -115,9 +115,11 @@ Feature: Booking tickets
     When I click on booking now button
     And I empty from date
     And I input to date "11192022"
+    Then I see pop up message "tanggal From & To harus di isi"
+    When I click OK on alert pop up
     And I select entrance "Entrance Cibodas"
     And I select number of person "2"
-    And I select ranger "Fajar Nugraha"
+#    And I select ranger "Fajar Nugraha"
     When I click booked now button
     Then I see pop up message "Data cannot be empty !"
     When I click OK on alert pop up
@@ -130,7 +132,7 @@ Feature: Booking tickets
     And I empty to date
     And I select entrance "Entrance Cibodas"
     And I select number of person "2"
-    And I select ranger "Fajar Nugraha"
+#    And I select ranger "Fajar Nugraha"
     When I click booked now button
     Then I see pop up message "Data cannot be empty !"
     When I click OK on alert pop up
@@ -143,7 +145,7 @@ Feature: Booking tickets
     And I input to date "11192022"
     And I empty entrance
     And I select number of person "2"
-    And I select ranger "Fajar Nugraha"
+#    And I select ranger "Fajar Nugraha"
     When I click booked now button
     Then I see pop up message "Data cannot be empty !"
     When I click OK on alert pop up
@@ -156,7 +158,7 @@ Feature: Booking tickets
     And I input to date "11192022"
     And I select entrance "Entrance Salabintana"
     And I empty tickets
-    And I select ranger "Fajar Nugraha"
+#    And I select ranger "Fajar Nugraha"
     When I click booked now button
     Then I see pop up message "Data cannot be empty !"
     When I click OK on alert pop up

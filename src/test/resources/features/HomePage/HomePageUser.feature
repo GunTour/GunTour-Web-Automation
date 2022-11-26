@@ -6,11 +6,11 @@ Feature: homepage user
 
     Scenario: user wanted to book a products
       When user choose one product to book
-      Then should pop up successfully book a product
+      Then Product added to booking now with message "Added to Booking Now"
       And user choose a second product
-      Then should pop up successfully book a product
+      Then Product added to booking now with message "Product Added to Booking Now"
       When user choose a third product
-      Then should pop up successfully book a product
+      Then Product added to booking now with message "Product Added to Booking Now"
 
 
     Scenario: user wanted to see product detail

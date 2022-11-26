@@ -51,14 +51,14 @@ public class OrderHistoryStepDef {
     public void iAlreadyCreateABookingPlan() {
         homePage.clickBookedNowNavabr();
         bookingPage.inputFromDate("11172022");
-        wait(1000);
+        wait(500);
         bookingPage.inputToDate("11192022");
         bookingPage.clickDropDownEntrance();
         bookingPage.selectDropDownEntrance("Entrance Cibodas");
         bookingPage.clickDropDownPerson();
         bookingPage.selectDropDownPerson("5");
-        bookingPage.clickDropDownRangers();
-        bookingPage.selectDropDownRangers("Fajar Nugraha");
+//        bookingPage.clickDropDownRangers();
+//        bookingPage.selectDropDownRangers("Fajar Nugraha");
         bookingPage.scrollSmooth();
         bookingPage.clickBookedNowButton();
         Assert.assertEquals("Are you sure the data is correct?",bookingPage.sweetAlertAppear());
